@@ -92,7 +92,7 @@ sections:
           membership and convergence on what everyone believes in this religion,
   - section_id: call-to-action
     type: section_cta
-    title: The Thumpaverse is Yours...
+    title: The Thumpaverse is yours...
     subtitle: 'Don''t just enter the Universe. Become the Universe. '
     actions:
       - label: Get Started

@@ -34,10 +34,7 @@ sections:
             has_icon: true
             icon: arrow-right
             icon_position: right
-      - title: >-
-          : Hold lectures, seminars, debates, celebrations in your BRN. Bring
-          the best minds of our generation today to lay the philosophical
-          groundwork of tomorrow. 
+      - title: RESERVE A BARN
         image: images/feature2.png
         image_alt: App users welcoming a new member
         content: >-

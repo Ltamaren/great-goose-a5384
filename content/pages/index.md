@@ -57,7 +57,7 @@ sections:
             has_icon: true
             icon: arrow-right
             icon_position: right
-        title: Create barnstory...
+        title: Live the myth...
     subtitle: >-
       BRN is the “Platonic Academy” of the future. A Community based,
       interactive virtual space for BRN holders to learn, innovate and challenge

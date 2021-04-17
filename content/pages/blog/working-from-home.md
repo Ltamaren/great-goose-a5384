@@ -1,6 +1,6 @@
 ---
 title: Religion 2.0
-excerpt: 'Be a part of an evolving, blockchain sourced religion makers. '
+excerpt: Be a part of the first ev
 author: content/data/authors/jane-doe.yaml
 date: '2020-04-22'
 thumb_image: images/square-turtle.png

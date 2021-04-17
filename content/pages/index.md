@@ -62,6 +62,10 @@ sections:
             has_icon: true
             icon: arrow-right
             icon_position: right
+    subtitle: >-
+      BRN is the future’s version of the “Platonic Academy” a community based
+      interactive virtual space for BRN holders to learn, innovate and challenge
+      the status quo.  
   - section_id: reviews
     type: section_reviews
     background: white

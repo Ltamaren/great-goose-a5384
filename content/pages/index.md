@@ -37,10 +37,7 @@ sections:
       - title: RESERVE A BARN
         image: images/feature2.png
         image_alt: App users welcoming a new member
-        content: >-
-          Etiam vel urna sed massa egestas vulputate eu a velit. Sed ut nisl nec
-          sapien interdum luctus. Cras rhoncus condimentum metus sit amet
-          auctor.
+        content: "**\n**Hold lectures, seminars, debates, celebrations in your BRN. Bring the best minds of our generation today to lay the philosophical groundwork of tomorrow.\_\n\n"
         actions:
           - label: Learn More
             url: /features

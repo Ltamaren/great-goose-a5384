@@ -88,7 +88,7 @@ sections:
         content: >-
           “It’s a religious framework that could allow for belief sets to update
           much more quickly and also to democratize the relationship between
-          membership and convergence on what everyone believes in this religion,
+          membership and convergence on what everyone believes in this religion.
   - section_id: call-to-action
     type: section_cta
     title: The Thumpaverse is yours...

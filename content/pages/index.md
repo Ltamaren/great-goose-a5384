@@ -77,6 +77,14 @@ sections:
       - author: Parsley Montana
         avatar: images/review2.jpg
         avatar_alt: Parsley Montana's photo
+        content: >
+          BRN is the crazy ones, the misfits, the rebels, the troublemakers, the
+          round pegs in square holes… the ones who see things differently--
+          they’re not fond of rules, they have no respect for the status quo.
+          You can quote them, disagree with them, glorify or vilify them. But
+          the only thing you can’t do is ignore them because they change things…
+          They push the human race to the stars. They are writing the foundation
+          for a new interworld order, through science. 
       - author: Jonquil Von Haggerston
         avatar: images/review3.jpg
         avatar_alt: Jonquil Von Haggerston's photo

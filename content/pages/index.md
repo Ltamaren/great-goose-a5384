@@ -48,8 +48,8 @@ sections:
       - image: images/feature3.png
         image_alt: App user profile preview
         content: >
-          Farming is a social token "mining" process unique to BRN. Help to
-          expand the community and earn BRN.
+          Participate and contriubute to the evolution of BRN. Your ideas will
+          help create the BRN revolution.
         actions:
           - label: Get Started
             url: /features

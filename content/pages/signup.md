@@ -1,5 +1,5 @@
 ---
-title: URGENT "B" DROP
+title: URGENT MESSAGE
 image: images/11.jpg
 image_alt: Office desk top view
 seo:

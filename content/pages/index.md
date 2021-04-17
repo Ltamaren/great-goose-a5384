@@ -8,9 +8,9 @@ sections:
     title: >-
       “The world’s first decentralized, deflationary, NFT based post-religion
       token.
-    content: >-
-      Azimuth is the perfect theme for developers, designers and entrepreneurs
-      who need a sleek, modern SaaS site.
+    content: >
+      BRN is a diverse global blockchain thinktank creating the first open
+      source constitution for interstellar society. 
     actions:
       - label: Learn More
         url: /features

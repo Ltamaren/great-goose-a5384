@@ -1,6 +1,6 @@
 ---
 title: Las Vegas II
-subtitle: 'The first great Martian city '
+subtitle: The first great Martian city state
 excerpt: >-
   Praesent ut cursus enim, sit amet dictum turpis. Etiam justo orci, consectetur
   aliquet rhoncus sed, hendrerit vel odio.

@@ -3,6 +3,7 @@ import _ from 'lodash';
 
 import {htmlToReact, withPrefix, markdownify} from '../utils';
 import CtaButtons from './CtaButtons';
+import ThreeModelView from './ThreeModelView';
 
 export default class SectionFeatures extends React.Component {
     render() {
@@ -21,28 +22,37 @@ export default class SectionFeatures extends React.Component {
               </div>
               {_.get(section, 'features', null) && (
               <div className="inner">
-                {_.map(_.get(section, 'features', null), (feature, feature_idx) => (
-                <div key={feature_idx} className="block-item">
-                  <div className="grid">
-                    {_.get(feature, 'image', null) && (
-                    <div className="cell block-preview">
-                      <img src={withPrefix(_.get(feature, 'image', null))} alt={_.get(feature, 'image_alt', null)} />
-                    </div>
-                    )}
-                    <div className="cell block-content">
-                      <h3 className="block-title underline">{_.get(feature, 'title', null)}</h3>
-                      <div className="block-copy">
-                        {markdownify(_.get(feature, 'content', null))}
-                      </div>
-                      {_.get(feature, 'actions', null) && (
-                      <div className="block-buttons">
-                        <CtaButtons {...this.props} actions={_.get(feature, 'actions', null)} />
+                {_.map(_.get(section, 'features', null), (feature, feature_idx) => {
+                  const preview = _.get(feature, 'preview', null)
+                  return (
+                  <div key={feature_idx} className="block-item">
+                    <div className="grid">
+                      {preview && (
+                      <div className="cell block-preview">
+                      {
+                          preview.type === 'image'
+                        ? <img src={withPrefix(preview.image)} alt={preview.image_alt} />
+                        : preview.type === 'three_model_view'
+                        ? <ThreeModelView {...preview} />
+                        : null
+                      }
                       </div>
                       )}
+                      <div className="cell block-content">
+                        <h3 className="block-title underline">{_.get(feature, 'title', null)}</h3>
+                        <div className="block-copy">
+                          {markdownify(_.get(feature, 'content', null))}
+                        </div>
+                        {_.get(feature, 'actions', null) && (
+                        <div className="block-buttons">
+                          <CtaButtons {...this.props} actions={_.get(feature, 'actions', null)} />
+                        </div>
+                        )}
+                      </div>
                     </div>
                   </div>
-                </div>
-                ))}
+                  )
+                })}
                 </div>
               )}
             </section>

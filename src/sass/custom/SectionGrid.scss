@@ -1,0 +1,17 @@
+.SectionGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 800px) {
+  .SectionGrid {
+    display: block;
+    > * {
+      display: block;
+    }
+  }
+}

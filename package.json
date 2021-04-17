@@ -28,6 +28,9 @@
     "sourcebit": "^0.9.0",
     "sourcebit-source-filesystem": "^0.1.3",
     "sourcebit-target-next": "^0.5.2",
-    "sprintf-js": "^1.1.2"
+    "sprintf-js": "^1.1.2",
+    "three": "^0.127.0",
+    "three-gltf-loader": "^1.111.0",
+    "three-orbit-controls": "^82.1.0"
   }
 }

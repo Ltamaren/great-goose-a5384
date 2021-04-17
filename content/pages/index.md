@@ -1,14 +1,15 @@
 ---
 title: Home
 sections:
-  - section_id: hero
-    type: section_hero
+  - type: section_hero
     image: images/hero.png
     image_alt: App preview
-    title: This Is A Big Hero Headline
-    content: >-
-      Azimuth is the perfect theme for developers, designers and entrepreneurs
-      who need a sleek, modern SaaS site.
+    title: >-
+      “The world’s first decentralized, deflationary, NFT based post-religion
+      token.
+    content: >
+      BRN is a diverse global blockchain thinktank creating the first open
+      source code of ethics for ***outer space***.
     actions:
       - label: Learn More
         url: /features
@@ -16,18 +17,19 @@ sections:
   - section_id: features
     type: section_features
     background: gray
-    title: Features
-    subtitle: >-
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a metus
-      quis lorem malesuada luctus.
+    title: Enter the BRN
     features:
-      - title: The Best Feature of Your Services
-        image: images/feature1.png
-        image_alt: App preview on a phone and tablet
-        content: >-
-          Nam pulvinar ante eu ultricies volutpat. Aenean hendrerit, eros sed
-          aliquet luctus, lorem risus volutpat dolor, nec dignissim diam neque
-          consequat ex.
+      - title: Work barn. Play barn.
+        preview: 
+          type: three_model_view
+          scene: 3d/barn.gltf
+          cameraInitPos: 1,5,10
+          bgColor: rgb(247,249,251)
+        content: >
+          Work or play, our customizable  events have you covered. Hold
+          lectures, seminars, debates, concerts, or celebrations in the BRN.
+          Bring the best minds of our generation today to lay the philosophical
+          groundwork for outer space.
         actions:
           - label: Learn More
             url: /features
@@ -35,13 +37,12 @@ sections:
             has_icon: true
             icon: arrow-right
             icon_position: right
-      - title: Awesome Feature of Your Services
-        image: images/feature2.png
-        image_alt: App users welcoming a new member
-        content: >-
-          Etiam vel urna sed massa egestas vulputate eu a velit. Sed ut nisl nec
-          sapien interdum luctus. Cras rhoncus condimentum metus sit amet
-          auctor.
+      - title: Define your identity
+        preview:
+          type: image
+          image: images/cryptogoose.png
+          image_alt: App users welcoming a new member
+        content: "**CREATE YOUR AVATAR**: Create your own blockchain certified NFT barn avatar. Our avatars are designed to evaporate the inherent prejudices tethered to the human form.\_\n"
         actions:
           - label: Learn More
             url: /features
@@ -49,51 +50,60 @@ sections:
             has_icon: true
             icon: arrow-right
             icon_position: right
-      - title: Cool Feature of Your Services
-        image: images/feature3.png
-        image_alt: App user profile preview
-        content: >-
-          In ante enim, lobortis quis congue vel, finibus sit amet mi. Aenean
-          quis venenatis sem. Proin eget massa id metus eleifend maximus sit
-          amet nec urna.
+      - title: Live the myth...
+        preview:
+          type: three_model_view
+          scene: 3d/rikki.gltf
+          cameraInitPos: 1,0,1
+          bgColor: rgb(247,249,251)
+        content: >
+          Participate and contriubute to the evolution of BRN. Your ideas will
+          help create the BRN revolution.
         actions:
-          - label: Learn More
+          - label: Get Started
             url: /features
             style: secondary
             has_icon: true
             icon: arrow-right
             icon_position: right
+    subtitle: >-
+      BRN is the “Platonic Academy” of the future. A Community based,
+      interactive virtual space for BRN holders to learn, innovate and challenge
+      the status quo.  
   - section_id: reviews
     type: section_reviews
     background: white
     title: Testimonials
-    subtitle: >-
-      Aliquam malesuada ligula eget est fringilla blandit. Integer finibus
-      semper libero id sodales.
+    subtitle: Here's what the BRN Farmers have to say
     reviews:
       - author: Eric Widget
         avatar: images/review1.jpg
         avatar_alt: Eric Widget's photo
-        content: >-
-          Vestibulum a nunc ut eros condimentum posuere. Nullam dapibus quis
-          nunc non interdum. Pellentesque tortor ligula, gravida ac commodo eu.
+        content: |-
+
+          BRN is blockchain Hammurabi for interplanetary law.
       - author: Parsley Montana
         avatar: images/review2.jpg
         avatar_alt: Parsley Montana's photo
-        content: >-
-          Sed laoreet magna commodo libero euismod sodales. Nunc ac libero
-          convallis, interdum ligula vel, pretium diam. Integer commodo sem at
-          dui sollicitudin, vel posuere justo laoreet.
+        content: >
+          BRN is the crazy ones, the misfits, the rebels, the troublemakers, the
+          round pegs in square holes… the ones who see things differently--
+          they’re not fond of rules, they have no respect for the status quo.
+          You can quote them, disagree with them, glorify or vilify them. But
+          the only thing you can’t do is ignore them because they change things…
+          They push the human race to the stars. They are writing the foundation
+          for a new interworld order, through science. 
       - author: Jonquil Von Haggerston
         avatar: images/review3.jpg
         avatar_alt: Jonquil Von Haggerston's photo
         content: >-
-          Integer consectetur purus neque, ac porttitor enim convallis vitae.
-          Interdum et malesuada fames ac ante ipsum primis in faucibus.
+          “It’s a framework that could allow for belief sets to update much more
+          quickly and also to democratize the relationship between membership
+          and convergence on what everyone believes.
   - section_id: call-to-action
     type: section_cta
-    title: This Is Call To Action Block!
-    subtitle: This is an optional description for the call to action block.
+    title: The Thumpaverse is yours...
+    subtitle: 'Don''t just enter the Universe. Become the Universe. '
     actions:
       - label: Get Started
         url: /signup
@@ -101,7 +111,7 @@ sections:
   - section_id: recent-posts
     type: section_posts
     background: gray
-    title: Latest Posts
+    title: COMING SOON...
 seo:
   title: Stackbit Azimuth Theme
   description: The preview of the Azimuth theme

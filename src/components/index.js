@@ -19,6 +19,9 @@ import SectionHero from './SectionHero';
 import SectionPosts from './SectionPosts';
 import SectionPricing from './SectionPricing';
 import SectionReviews from './SectionReviews';
+import SectionGrid from './SectionGrid';
+import TieredBlurbs from './TieredBlurbs';
+import ThreeModelView from './ThreeModelView';
 
 export {
     Action,
@@ -41,7 +44,10 @@ export {
     SectionHero,
     SectionPosts,
     SectionPricing,
-    SectionReviews
+    SectionReviews,
+    SectionGrid,
+    TieredBlurbs,
+    ThreeModelView,
 };
 
 export default {
@@ -65,5 +71,8 @@ export default {
     SectionHero,
     SectionPosts,
     SectionPricing,
-    SectionReviews
+    SectionReviews,
+    SectionGrid,
+    TieredBlurbs,
+    ThreeModelView,
 };

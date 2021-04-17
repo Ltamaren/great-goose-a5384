@@ -34,7 +34,7 @@ sections:
       - title: Define your identity
         image: images/cryptogoose.png
         image_alt: App users welcoming a new member
-        content: "**CREATE YOUR AVATAR**: Create your own blockchain certified NFT barn avatar. Our avatars are designed to evaporate inherent prejudice tethered to the physical form.\_\n\n"
+        content: "**CREATE YOUR AVATAR**: Create your own blockchain certified NFT barn avatar. Our avatars are designed to evaporate the inherent prejudices tethered to the human form.\_\n"
         actions:
           - label: Learn More
             url: /features

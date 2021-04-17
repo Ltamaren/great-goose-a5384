@@ -5,7 +5,9 @@ sections:
     type: section_hero
     image: images/hero.png
     image_alt: App preview
-    title: This Is A Big Hero Booboo
+    title: >-
+      “The world’s first decentralized, deflationary, NFT based post-religion
+      (religion 2.0) token.
     content: >-
       Azimuth is the perfect theme for developers, designers and entrepreneurs
       who need a sleek, modern SaaS site.

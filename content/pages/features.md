@@ -22,6 +22,7 @@ sections:
       - label: Get Started
         url: '#'
         style: secondary
+    title: The journey begins here
 seo:
   title: Features
   description: This is the features page

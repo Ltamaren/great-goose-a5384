@@ -2,9 +2,7 @@
 title: First band on the moon.
 subtitle: A story about customer loyalty
 author: content/data/authors/jane-doe.yaml
-excerpt: >-
-  BRN is at the frontier of interplanetary arts and culture. BRN plans to hold
-  its first earth+ concert in 2024 with the Milky Way based band Thumpasaurus. 
+excerpt: BRN will collaborate with Space X to send Thu
 date: '2021-01-03'
 thumb_image: images/cryptogoose2.png
 thumb_image_alt: A group of people working in a cafe

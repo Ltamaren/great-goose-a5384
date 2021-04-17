@@ -92,7 +92,7 @@ sections:
           membership and convergence on what everyone believes in this religion,
   - section_id: call-to-action
     type: section_cta
-    title: This Is Call To Action Block!
+    title: The Thumpaverse is Yours...
     subtitle: This is an optional description for the call to action block.
     actions:
       - label: Get Started

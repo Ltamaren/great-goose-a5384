@@ -10,7 +10,9 @@ sections:
       token.
     content: >
       BRN is a diverse global blockchain thinktank creating the first open
-      source constitution for interstellar society. 
+      source text
+
+       for interstellar society.
     actions:
       - label: Learn More
         url: /features

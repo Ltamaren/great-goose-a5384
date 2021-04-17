@@ -19,9 +19,6 @@ sections:
     type: section_features
     background: gray
     title: Enter the BRN
-    subtitle: >-
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a metus
-      quis lorem malesuada luctus.
     features:
       - title: Work barn. Play barn.
         image: images/feature1.png

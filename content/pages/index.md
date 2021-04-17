@@ -71,9 +71,9 @@ sections:
       - author: Eric Widget
         avatar: images/review1.jpg
         avatar_alt: Eric Widget's photo
-        content: |
+        content: |-
 
-          “BRN is blockchain Hammurabi for interplanetary law.” 
+          “BRN is blockchain Hammurabi for interplanetary law.
       - author: Parsley Montana
         avatar: images/review2.jpg
         avatar_alt: Parsley Montana's photo

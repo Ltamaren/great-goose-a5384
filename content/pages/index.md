@@ -23,9 +23,8 @@ sections:
       - title: Work barn. Play barn.
         image: images/feature1.png
         image_alt: App preview on a phone and tablet
-        content: >
-          Whether your a work type or a play type of farmer. Our customizable
-          barn events have you covered.
+        content: |2
+           Work or play, our customizable barn events have you covered.
         actions:
           - label: Learn More
             url: /features

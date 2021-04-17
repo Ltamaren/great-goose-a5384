@@ -93,7 +93,7 @@ sections:
   - section_id: call-to-action
     type: section_cta
     title: The Thumpaverse is Yours...
-    subtitle: Enter the universe. Become the Universe
+    subtitle: ' Become the Universe'
     actions:
       - label: Get Started
         url: /signup

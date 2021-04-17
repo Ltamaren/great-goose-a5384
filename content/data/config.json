@@ -29,7 +29,7 @@
                 "style": "link"
             },
             {
-                "label": "Sign Up",
+                "label": "JOIN BRN",
                 "url": "/signup",
                 "style": "primary"
             }

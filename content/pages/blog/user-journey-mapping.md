@@ -8,7 +8,7 @@ author: content/data/authors/jane-doe.yaml
 date: '2019-03-27'
 thumb_image: images/Vegas 2 B2.jpeg
 thumb_image_alt: Business people in a meeting
-image: images/vegas 2-2.jpeg
+image: images/Vebas 2 rectangle.jpeg
 image_alt: Business people in a meeting
 seo:
   title: A Guide To User Journey Mapping

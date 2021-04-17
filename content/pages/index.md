@@ -47,10 +47,7 @@ sections:
             icon_position: right
       - image: images/feature3.png
         image_alt: App user profile preview
-        content: >-
-          In ante enim, lobortis quis congue vel, finibus sit amet mi. Aenean
-          quis venenatis sem. Proin eget massa id metus eleifend maximus sit
-          amet nec urna.
+        content: "Hold lectures, seminars, debates, celebrations in your BRN. Bring the best minds of our generation today to lay the philosophical groundwork of tomorrow.\_\n\n"
         actions:
           - label: Learn More
             url: /features

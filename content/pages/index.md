@@ -34,7 +34,7 @@ sections:
             has_icon: true
             icon: arrow-right
             icon_position: right
-      - title: Awesome Feature of Your Services
+      - title: ' RESERVE A BARN: Hold lectures, seminars, debates, celebrations in your BRN. Bring the best minds of our generation today to lay the philosophical groundwork of tomorrow. '
         image: images/feature2.png
         image_alt: App users welcoming a new member
         content: >-

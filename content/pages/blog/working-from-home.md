@@ -1,6 +1,6 @@
 ---
 title: Religion 2.0
-excerpt: Be a part of the first ev
+excerpt: Be a part of the first block-chain based evolutionary belief system.
 author: content/data/authors/jane-doe.yaml
 date: '2020-04-22'
 thumb_image: images/square-turtle.png

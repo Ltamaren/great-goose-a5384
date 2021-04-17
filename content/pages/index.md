@@ -24,7 +24,7 @@ sections:
         image: images/feature1.png
         image_alt: App preview on a phone and tablet
         content: |
-          Work or play, our customizable  events have you covered.
+          Work or play, our customizable  events have you covered. Reserve 
         actions:
           - label: Learn More
             url: /features

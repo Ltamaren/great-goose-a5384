@@ -23,10 +23,9 @@ sections:
       - title: Work barn. Play barn.
         image: images/feature1.png
         image_alt: App preview on a phone and tablet
-        content: >-
-          Nam pulvinar ante eu ultricies volutpat. Aenean hendrerit, eros sed
-          aliquet luctus, lorem risus volutpat dolor, nec dignissim diam neque
-          consequat ex.
+        content: >
+          Whether your a work type or a play type of farmer. Our customizable
+          barn spaces have you covered. 
         actions:
           - label: Learn More
             url: /features

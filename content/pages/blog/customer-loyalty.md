@@ -1,6 +1,5 @@
 ---
 title: First band on the moon.
-subtitle: A story about customer loyalty
 author: content/data/authors/jane-doe.yaml
 excerpt: BRN will collaborate with Space X to send Thumpasaurus to the moon
 date: '2021-01-03'

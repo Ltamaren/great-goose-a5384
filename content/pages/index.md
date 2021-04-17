@@ -48,7 +48,7 @@ sections:
           Farming is a social token "mining" process unique to BRN. Help to
           expand the community and earn BRN.
         actions:
-          - label: Learn More
+          - label: Get Started
             url: /features
             style: secondary
             has_icon: true

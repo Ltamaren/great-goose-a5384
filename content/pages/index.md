@@ -35,7 +35,7 @@ sections:
             icon: arrow-right
             icon_position: right
       - title: 'Define Your Identity '
-        image: images/feature2.png
+        image: images/connected graphic.png
         image_alt: App users welcoming a new member
         content: "**CREATE YOUR AVATAR**: Create your own blockchain certified NFT barn avatar. Our avatars are designed to evaporate inherent prejudice tethered to the physical form.\_\n\n"
         actions:

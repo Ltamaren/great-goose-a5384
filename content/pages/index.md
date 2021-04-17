@@ -25,7 +25,7 @@ sections:
         image_alt: App preview on a phone and tablet
         content: >
           Whether your a work type or a play type of farmer. Our customizable
-          barn spaces have you covered. 
+          barn events have you covered.
         actions:
           - label: Learn More
             url: /features

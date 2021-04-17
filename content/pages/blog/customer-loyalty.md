@@ -5,7 +5,7 @@ excerpt: BRN will collaborate with Space X to send Thumpasaurus to the moon
 date: '2021-01-03'
 thumb_image: images/band moon.jpeg
 thumb_image_alt: A group of people working in a cafe
-image: images/3.jpg
+image: images/festive-lime.jpeg
 image_alt: A group of people working in a cafe
 seo:
   title: Customer Loyalty Programs That Stick

@@ -64,7 +64,7 @@ sections:
     type: section_reviews
     background: white
     title: Testimonials
-    subtitle: Here's what the BRN Farmers have to sa
+    subtitle: Here's what the BRN Farmers have to say
     reviews:
       - author: Eric Widget
         avatar: images/review1.jpg

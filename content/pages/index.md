@@ -23,8 +23,7 @@ sections:
       - title: Work barn. Play barn.
         image: images/feature1.png
         image_alt: App preview on a phone and tablet
-        content: |
-          Work or play, our customizable  events have you covered. Reserve 
+        content: "Work or play, our customizable  events have you covered. Hold lectures, seminars, debates, celebrations in your BRN. Bring the best minds of our generation today to lay the philosophical groundwork of tomorrow.\_\n"
         actions:
           - label: Learn More
             url: /features

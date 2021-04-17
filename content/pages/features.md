@@ -7,7 +7,7 @@ sections:
     image: images/feature1.png
     image_alt: App preview on a phone and tablet
     title: Create Barnstory...
-    content: "**CREATE YOUR AVATAR**: Create your own blockchain certified NFT barn avatar. Our avatars are designed to evaporate inherent prejudice tethered to the physical form.\_\n\n**RESERVE A BARN**: Hold lectures, seminars, debates, celebrations in your BRN. Bring the best minds of our generation today to lay the philosophical groundwork of tomorrow.\_\n\n**DEEP LEARNING**:\_ Audition your ideas with our deep learning software to watch ideas play out in simulated BRN society.\_\n\n**YOU ARE THE MYTH: **your characters will have their own adventures in the Thumpaverse. Write your story. Be the bridge between past and present myths. Choose your own Space Barn adventure.\_\n"
+    content: "**CREATE YOUR AVATAR**: Create your own blockchain certified NFT barn avatar. Our avatars are designed to evaporate inherent prejudice tethered to the physical form.\_\n\n**RESERVE A BARN**: Hold lectures, seminars, debates, celebrations in your BRN. Bring the best minds of our generation today to lay the philosophical groundwork of tomorrow.\_\n\n**DEEP LEARNING**:\_ Audition your ideas with our deep learning software to watch ideas play out in simulated BRN society.\_\n\n**FARM:** Our unique social \"mining\" process where users will earn BRN through active community involvement. \n\n\\*\\*YOU ARE THE MYTH: \\*\\*your characters will have their own adventures in the Thumpaverse. Write your story. Be the bridge between past and present myths. Choose your own Space Barn adventure.\_\n"
     actions:
       - label: Free Trial
         url: /signup

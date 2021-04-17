@@ -4,9 +4,7 @@ sections:
   - type: section_hero
     image: images/hero.png
     image_alt: App preview
-    title: >-
-      “The world’s first decentralized, deflationary, NFT based post-religion
-      token.
+    title: '“The world’s first decentralized, deflationary, NFT basedtoken.'
     content: >
       BRN is a diverse global blockchain thinktank creating the first open
       source code of ethics for ***outer space***.

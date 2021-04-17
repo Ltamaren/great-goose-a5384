@@ -56,7 +56,7 @@ sections:
             icon_position: right
         title: RESERVE YOUR BARN
     subtitle: >-
-      BRN is the future’s version of the “Platonic Academy” a community based
+      BRN is the future’s of the “Platonic Academy” a community based
       interactive virtual space for BRN holders to learn, innovate and challenge
       the status quo.  
   - section_id: reviews

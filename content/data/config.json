@@ -16,7 +16,8 @@
             {
                 "label": "BUDL",
                 "url": "/features",
-                "style": "link"
+                "style": "link",
+                "new_window": true
             },
             {
                 "label": "RELIGION 2.0",

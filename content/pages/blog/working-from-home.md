@@ -1,6 +1,8 @@
 ---
 title: Religion 2.0
-excerpt: Be a part of the first block-chain based evolutionary belief system.
+excerpt: >-
+  Be a part of the first block-chain based evolutionary belief system for outer
+  space.
 author: content/data/authors/jane-doe.yaml
 date: '2020-04-22'
 thumb_image: images/square-turtle.png

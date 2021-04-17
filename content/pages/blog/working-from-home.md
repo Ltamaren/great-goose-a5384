@@ -1,8 +1,6 @@
 ---
 title: Religion 2.0
-excerpt: >-
-  Work at home parent is an entrepreneur who works from home and integrates
-  parenting into his or her business activities.
+excerpt: 'Be a part of an evolving, '
 author: content/data/authors/jane-doe.yaml
 date: '2020-04-22'
 thumb_image: images/square-turtle.png

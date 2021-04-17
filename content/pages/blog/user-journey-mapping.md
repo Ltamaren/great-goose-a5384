@@ -6,7 +6,7 @@ excerpt: >-
   aliquet rhoncus sed, hendrerit vel odio.
 author: content/data/authors/jane-doe.yaml
 date: '2019-03-27'
-thumb_image: images/Vegas 2 B2.jpeg
+thumb_image: images/violet-coriander.jpeg
 thumb_image_alt: Business people in a meeting
 image: images/Vebas 2 rectangle.jpeg
 image_alt: Business people in a meeting

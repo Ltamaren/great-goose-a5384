@@ -6,7 +6,7 @@ sections:
     image: images/hero.png
     image_alt: App preview
     title: >-
-      “The world’s first decentralized, deflationary, NFT based post-religion 
+      “The world’s first decentralized, deflationary, NFT based post-religion
       token.
     content: >-
       Azimuth is the perfect theme for developers, designers and entrepreneurs

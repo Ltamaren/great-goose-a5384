@@ -44,7 +44,9 @@ sections:
             icon_position: right
       - image: images/feature3.png
         image_alt: App user profile preview
-        content: "Hold lectures, seminars, debates, celebrations in your BRN. Bring the best minds of our generation today to lay the philosophical groundwork of tomorrow.\_\n\n"
+        content: >
+          Farming is a social token "mining" process unique to BRN. Help to
+          expand the community and earn BRN.
         actions:
           - label: Learn More
             url: /features

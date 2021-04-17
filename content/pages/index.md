@@ -86,9 +86,9 @@ sections:
         avatar: images/review3.jpg
         avatar_alt: Jonquil Von Haggerston's photo
         content: >-
-          “It’s a religious framework that could allow for belief sets to update
-          much more quickly and also to democratize the relationship between
-          membership and convergence on what everyone believes.
+          “It’s a framework that could allow for belief sets to update much more
+          quickly and also to democratize the relationship between membership
+          and convergence on what everyone believes.
   - section_id: call-to-action
     type: section_cta
     title: The Thumpaverse is yours...

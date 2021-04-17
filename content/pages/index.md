@@ -10,7 +10,7 @@ sections:
       token.
     content: >
       BRN is a diverse global blockchain thinktank creating the first open
-      source code of ethics.
+      source code of ethics for outer space.
     actions:
       - label: Learn More
         url: /features

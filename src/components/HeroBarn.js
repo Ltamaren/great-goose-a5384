@@ -1,9 +1,11 @@
 import { useRef, useEffect } from 'react';
-import { withPrefix } from '../utils';
 import * as THREE from 'three'
 import oc from 'three-orbit-controls'
 import GLTFLoader from 'three-gltf-loader';
 import _ from 'lodash';
+import { withPrefix } from '../utils';
+import useThreeStore from '../store/three'
+import renderer from './ThreeManager'
 
 const {
   PointLight, PerspectiveCamera, Scene, WebGLRenderer,
@@ -27,16 +29,27 @@ const HeroBarn = (props) => {
   const bboxRef = useRef()
   const lightRef = useRef()
   const frameRef = useRef()
+  const { addScene } = useThreeStore(state => state)
 
   useEffect(() => {
-    initScene()
-    return () => {
-      cancelAnimationFrame(frameRef.current)
-      window.removeEventListener('resize', handleResize)
-    }
+    console.log("BOOP")
+    handleMounted()
   }, [])
 
-  function initScene() {
+  async function handleMounted() {
+    // const sceneData = makeScene(cnrRef.current)
+    const sceneRenderFn = await initScene(cnrRef.current)
+    console.log("BOOP", scene)
+    const scene = {
+      id: 'hero-barn',
+      elem: cnrRef.current,
+      ctx: canvasRef.current.getContext('2d'),
+      fn: sceneRenderFn,
+    }
+    addScene(scene)
+  }
+
+  async function initScene() {
     const cnr = cnrRef.current
     const canvas = canvasRef.current
     var scene, renderer, camera, controls
@@ -66,17 +79,19 @@ const HeroBarn = (props) => {
     // camera.position.set( ...cameraInitPos );
     camera.position.copy(savedCamera.cameraPosition)
     
-    loader.load(
-      withPrefix(_.get(props, 'scene', null)),
-      (gltf) => {
-        scene.add(gltf.scene)
-        modelRef.current = gltf.scene
-        bboxRef.current = new Box3().setFromObject( gltf.scene );
-        // const box = makeBox(bboxRef.current)
-        // scene.add(box)
-        update()
-      }
-    )
+    await new Promise((yes, no) => {
+      loader.load(
+        withPrefix(_.get(props, 'scene', null)),
+        (gltf) => {
+          scene.add(gltf.scene)
+          modelRef.current = gltf.scene
+          bboxRef.current = new Box3().setFromObject( gltf.scene );
+          // const box = makeBox(bboxRef.current)
+          // scene.add(box)
+          // update()
+        }
+      )
+    })
 
     const light2 = new PointLight()
     light2.position.set(0,6.748,-11.808)
@@ -102,29 +117,34 @@ const HeroBarn = (props) => {
     controlsRef.current = controls
     window._CAMERA = cameraRef.current
     // render()
-    run()
+    // run()
+
+    return (time, rect) => {
+      console.log("rendering hero")
+      renderer.render(scene, camera)
+    }
   }
 
   function handleResize() {
     const dims = cnrRef.current.getBoundingClientRect()
     cameraRef.current.aspect = dims.width / dims.height;
     cameraRef.current.updateProjectionMatrix();
-    rendererRef.current.setSize( dims.width, dims.height );
+    // rendererRef.current.setSize( dims.width, dims.height );
   }
 
-  function run () {
+  // function run () {
     // frameRef.current = requestAnimationFrame( run );
-    update()
-  }
+    // update()
+  // }
 
-  function update () {
-    controlsRef.current.update();
-    rendererRef.current.render( sceneRef.current, cameraRef.current );
-  }
+  // function update () {
+  //   controlsRef.current.update();
+  //   rendererRef.current.render( sceneRef.current, cameraRef.current );
+  // }
   
-  function render() {
-    rendererRef.current.render( sceneRef.current, cameraRef.current );
-  }
+  // function render() {
+  //   rendererRef.current.render( sceneRef.current, cameraRef.current );
+  // }
 
   return(
     <div className="HeroBarn" ref={cnrRef} style={{

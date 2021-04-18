@@ -24,7 +24,7 @@ sections:
           type: three_model_view
           id: landing.model.barn
           scene: 3d/barn.gltf
-          cameraInitPos: 1,10,10
+          cameraInitPos: 1,8,10
           bgColor: rgb(247,249,251)
         content: >
           Work or play, our customizable  events have you covered. Hold

@@ -5,9 +5,8 @@ const useStore = create((set,get) => {
     scenes: {},
     addScene: (scene) => {
       const scenes = get().scenes
-      scenes[scene.id] = scene
       console.log(scene)
-      set(state => ({ scenes }))
+      set(state => ({ scenes: {...scenes, [scene.id]: scene} }))
     },
 
     canvas: null,

@@ -9,7 +9,7 @@ if (typeof window !== 'undefined') {
 }
 
 const ThreeManager = () => {
-  const { scenes } = useThreeStore(state => state)
+  const scenes = useThreeStore(state => state.scenes)
   const frameRef = useRef()
 
   useEffect(() => {
@@ -18,6 +18,7 @@ const ThreeManager = () => {
   }, [])
 
   useEffect(() => {
+    console.log("SCENS:", scenes)
     cancelAnimationFrame(frameRef.current)
     frameRef.current = requestAnimationFrame(render);
   }, [scenes])

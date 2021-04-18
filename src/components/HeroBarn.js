@@ -39,7 +39,7 @@ const HeroBarn = (props) => {
   async function handleMounted() {
     // const sceneData = makeScene(cnrRef.current)
     const sceneRenderFn = await initScene(cnrRef.current)
-    console.log("BOOP", scene)
+    console.log("BOOP2", scene)
     const scene = {
       id: 'hero-barn',
       elem: cnrRef.current,

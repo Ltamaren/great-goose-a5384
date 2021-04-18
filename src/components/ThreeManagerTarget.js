@@ -17,7 +17,7 @@ const raycaster = new Raycaster()
 const ThreeManagerTarget = (props) => {
   const cnrRef = useRef()
   const canvasRef = useRef()
-  const { addScene } = useThreeStore(state => state)
+  const { devicePixelRatio, addScene } = useThreeStore(state => state)
 
   useEffect(() => {
     handleMounted() // HANDLE ASYNC ?
@@ -26,11 +26,15 @@ const ThreeManagerTarget = (props) => {
   async function handleMounted() {
     const sceneData = makeScene(cnrRef.current)
     const sceneRenderFn = await initScene(cnrRef.current)
+    const rect = canvasRef.current.getBoundingClientRect()
+    // canvasRef.current.width = rect.width
+    // canvasRef.current.height = rect.height
+    const ctx = canvasRef.current.getContext('2d')
     addScene({
       id: props.id,
       elem: cnrRef.current,
-      ctx: canvasRef.current.getContext('2d'),
       fn: sceneRenderFn,
+      ctx,
     })
   }
 
@@ -95,7 +99,7 @@ const ThreeManagerTarget = (props) => {
       // model.rotation.y = time * .1;
       camera.aspect = rect.width / rect.height;
       camera.updateProjectionMatrix();
-      // controls.handleResize();
+      // controls.handleResize()
       controls.update();
       renderer.render(scene, camera);
     };

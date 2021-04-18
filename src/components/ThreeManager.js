@@ -21,7 +21,6 @@ const ThreeManager = () => {
   }, [])
 
   function main() {
-    // const canvas = canvasRef.current;
     const canvas = document.createElement('canvas');
     const renderer = new WebGLRenderer({ canvas, alpha: true });
     renderer.setPixelRatio( window.devicePixelRatio );
@@ -37,23 +36,26 @@ const ThreeManager = () => {
     function makeScene(elem) {
       const scene = new Scene();
 
-      const fov = 45;
-      const aspect = 2;  // the canvas default
-      // const near = 0.1;
-      // const far = 5;
-      const camera = new PerspectiveCamera(fov, aspect);
+      const camera = new PerspectiveCamera( 
+        // 70,                               //FOV
+        // elem.width / elem.height,         //aspect
+        // 1,                                //near clipping plane
+        // 100                               //far clipping plane
+      )
       const initCamPos = elem.dataset.cameraPosition.split(',').map(i => parseFloat(i))
       camera.position.set(...initCamPos);
       camera.lookAt(0, 0, 0);
       scene.add(camera);
 
       const controls = new OrbitControls(camera, elem);
-      // controls.noZoom = true;
-      // controls.noPan = true;
-      // controls.enabled = false;
-      controls.addEventListener("change", () => {
-        console.log(camera.position, controls.target)
-      })
+      controls.noZoom = true;
+      controls.noPan = true;
+      controls.enabled = false;
+      controls.autoRotate = true
+      // controls.autoRotateSpeed = 0.1
+      // controls.addEventListener("change", () => {
+      //   console.log(camera.position, controls.target)
+      // })
 
       {
         const color = 0xFFFFFF;
@@ -99,7 +101,7 @@ const ThreeManager = () => {
 
       scene.add(model);
       return (time, rect) => {
-        model.rotation.y = time * .1;
+        // model.rotation.y = time * .1;
         camera.aspect = rect.width / rect.height;
         camera.updateProjectionMatrix();
         // controls.handleResize();
@@ -116,7 +118,7 @@ const ThreeManager = () => {
     });
     
     function render(time) {
-      time *= 0.001;
+      // time *= 0.0001;
   
       for (const {elem, fn, ctx} of sceneElements) {
         // get the viewport relative position of this element
@@ -132,18 +134,19 @@ const ThreeManager = () => {
   
         if (!isOffscreen) {
           // make sure the renderer's canvas is big enough
-          if (rendererCanvas.width < width || rendererCanvas.height < height) {
-            renderer.setSize(width, height, false);
+          if (rendererCanvas.width !== width || rendererCanvas.height !== height) {
+            renderer.setSize(width, height, true);
           }
   
           // make sure the canvas for this area is the same size as the area
           if (ctx.canvas.width !== width || ctx.canvas.height !== height) {
             ctx.canvas.width = width;
             ctx.canvas.height = height;
+            // ctx.canvas.style.width = 
           }
   
-          renderer.setScissor(0, 0, width, height);
-          renderer.setViewport(0, 0, width, height);
+          renderer.setScissor(0, 0, width/2, height/2);
+          renderer.setViewport(0, 0, width/2, height/2);
   
           fn(time, rect);
   
@@ -162,22 +165,10 @@ const ThreeManager = () => {
     requestAnimationFrame(render);
 
   }
-
-  return null
-  // return(
-    // <div id="ThreeManager" style={{position: 'fixed', width: '100vw', height: '100vh', top: 0, left: 0, zIndex: -1}}>
-    //   {/* <canvas
-    //     ref={canvasRef}
-    //     style={{
-    //       position: 'absolute',
-    //       left: '0',
-    //       top: '0',
-    //       width: '100%',
-    //       height: '100%',
-    //       display: 'block',
-    //     }} /> */}
-    // </div>
-  // )
+  // return null
+  return (
+    <canvas id="boopCanvas" ref={canvasRef} style={{position: 'fixed', zIndex: -1}} />
+  )
 }
 
 export default ThreeManager

@@ -14,7 +14,9 @@ const loader = new GLTFLoader()
 
 const raycaster = new Raycaster()
 
-const ThreeModelView = (props) => {
+const INIT_POS = '{"cameraPosition":{"x":-4.854831631971536,"y":1.1582137352538657,"z":0.7749090484638657},"targetPosition":{"x":-1.706169253874643,"y":1.5165199445198663,"z":-1.4398500949057278}}'
+
+const HeroBarn = (props) => {
   const cnrRef = useRef()
   const canvasRef = useRef()
   const cameraRef = useRef()
@@ -26,13 +28,13 @@ const ThreeModelView = (props) => {
   const lightRef = useRef()
   const frameRef = useRef()
 
-  // useEffect(() => {
-  //   initScene()
-  //   return () => {
-  //     cancelAnimationFrame(frameRef.current)
-  //     window.removeEventListener('resize', handleResize)
-  //   }
-  // }, [])
+  useEffect(() => {
+    initScene()
+    return () => {
+      cancelAnimationFrame(frameRef.current)
+      window.removeEventListener('resize', handleResize)
+    }
+  }, [])
 
   function initScene() {
     const cnr = cnrRef.current
@@ -49,7 +51,7 @@ const ThreeModelView = (props) => {
     renderer.setSize( cnrDims.width, cnrDims.height );
 
     scene = new Scene();
-    scene.background = new Color(props.bgColor);
+    scene.background = new Color('black');
 
     const cameraInitPos = props.cameraInitPos.split(',').map(i => parseFloat(i))
     camera = new PerspectiveCamera( 
@@ -58,7 +60,11 @@ const ThreeModelView = (props) => {
         1,                                //near clipping plane
         100                               //far clipping plane
     );
-    camera.position.set( ...cameraInitPos );
+
+    const savedCamera = JSON.parse(INIT_POS)
+
+    // camera.position.set( ...cameraInitPos );
+    camera.position.copy(savedCamera.cameraPosition)
     
     loader.load(
       withPrefix(_.get(props, 'scene', null)),
@@ -77,42 +83,26 @@ const ThreeModelView = (props) => {
     light2.intensity = 1
     scene.add(light2)
 
-    canvas.addEventListener("mousedown", handleMouseDown)
-    canvas.addEventListener("mouseup", handleMouseUp)
-    canvas.addEventListener("touchstart", handleTouchStart)
-    canvas.addEventListener("touchend", handleTouchEnd)
-
     controls = new OrbitControls( camera, renderer.domElement );
-    // controls.enableDamping = true;
-    // controls.dampingFactor = 0.1;
+    controls.target.copy(savedCamera.targetPosition)
+    controls.enableDamping = true;
+    controls.dampingFactor = 0.1;
+    // window._CONTROLS = controls
     controls.enableZoom = false;
     controls.enablePan = false;
     controls.enabled = false;
-    controls.addEventListener("change", render)
-
+    // controls.addEventListener("change", render)
+    
     window.addEventListener( 'resize', handleResize );
-
+    
     sceneRef.current = scene
     rendererRef.current = renderer
     canvasRef.current = canvas
     cameraRef.current = camera
     controlsRef.current = controls
-
-    render()
-  }
-
-  function makeBox(bbox) {
-    // make a BoxBufferGeometry of the same size as Box3
-    const dimensions = new Vector3().subVectors( bbox.max, bbox.min );
-    const boxGeo = new BoxBufferGeometry(dimensions.x, dimensions.y, dimensions.z);
-
-    // move new mesh center so it's aligned with the original object
-    const matrix = new Matrix4().setPosition(dimensions.addVectors(bbox.min, bbox.max).multiplyScalar( 0.5 ));
-    boxGeo.applyMatrix(matrix);
-
-    // make a mesh
-    const mesh = new Mesh(boxGeo, new MeshBasicMaterial( { color: 0xffcc55 } ));
-    return mesh
+    window._CAMERA = cameraRef.current
+    // render()
+    run()
   }
 
   function handleResize() {
@@ -122,33 +112,8 @@ const ThreeModelView = (props) => {
     rendererRef.current.setSize( dims.width, dims.height );
   }
 
-  function handleMouseDown() {
-    controlsRef.current.enabled = true
-  }
-  
-  function handleMouseUp() {
-    controlsRef.current.enabled = false
-  }
-
-  function handleTouchStart(e) {
-    const { width, height, x, y } = cnrRef.current.getBoundingClientRect()
-    const user = new Vector2(
-      (e.targetTouches[0].clientX - x) / width * 2 - 1,
-      -((e.targetTouches[0].clientY - y) / height * 2 - 1)
-    )
-    raycaster.setFromCamera(user, cameraRef.current)
-    // sceneRef.current.add(new ArrowHelper(raycaster.ray.direction, raycaster.ray.origin, 300, 0xff0000) )
-    if (raycaster.ray.intersectsBox(bboxRef.current)) {
-      controlsRef.current.enabled = true
-    }
-  }
-
-  function handleTouchEnd() {
-    controlsRef.current.enabled = false
-  }
-  
   function run () {
-    frameRef.current = requestAnimationFrame( run );
+    // frameRef.current = requestAnimationFrame( run );
     update()
   }
 
@@ -162,21 +127,17 @@ const ThreeModelView = (props) => {
   }
 
   return(
-    <div
-      className="ThreeModelView"
-      data-three-model={props.scene}
-      data-camera-position={props.cameraInitPos}
-      ref={cnrRef}
-      style={{
-        width: '100%',
-        paddingBottom: '100%',
-        position: 'relative',
+    <div className="HeroBarn" ref={cnrRef} style={{
+      width: '100%',
+      height: '100%',
+      position: 'absolute',
+      top: 0, left: 0,
     }}>
-      {/* <canvas
+      <canvas
         style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: 0, touchAction: 'pan-y'}}
-        ref={canvasRef} /> */}
+        ref={canvasRef} />
     </div>
   )
 }
 
-export default ThreeModelView
+export default HeroBarn

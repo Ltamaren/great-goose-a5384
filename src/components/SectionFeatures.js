@@ -4,12 +4,15 @@ import _ from 'lodash';
 import {htmlToReact, withPrefix, markdownify} from '../utils';
 import CtaButtons from './CtaButtons';
 import ThreeModelView from './ThreeModelView';
+import ThreeManager from './ThreeManager';
+import ThreeManagerTarget from './ThreeManagerTarget';
 
 export default class SectionFeatures extends React.Component {
     render() {
         let section = _.get(this.props, 'section', null);
         return (
             <section id={_.get(section, 'section_id', null)} className={'block features-block bg-' + _.get(section, 'background', null) + ' outer'}>
+              <ThreeManager />
               <div className="block-header inner-small">
                 {_.get(section, 'title', null) && (
                 <h2 className="block-title">{_.get(section, 'title', null)}</h2>
@@ -33,7 +36,7 @@ export default class SectionFeatures extends React.Component {
                           preview.type === 'image'
                         ? <img src={withPrefix(preview.image)} alt={preview.image_alt} />
                         : preview.type === 'three_model_view'
-                        ? <ThreeModelView {...preview} />
+                        ? <ThreeManagerTarget {...preview} />
                         : null
                       }
                       </div>

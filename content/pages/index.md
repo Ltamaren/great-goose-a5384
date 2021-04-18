@@ -23,7 +23,7 @@ sections:
         preview: 
           type: three_model_view
           scene: 3d/barn.gltf
-          cameraInitPos: 1,5,10
+          cameraInitPos: 1,10,10
           bgColor: rgb(247,249,251)
         content: >
           Work or play, our customizable  events have you covered. Hold

@@ -4,7 +4,7 @@ import _ from 'lodash';
 import {htmlToReact, withPrefix, markdownify} from '../utils';
 import CtaButtons from './CtaButtons';
 import ThreeModelView from './ThreeModelView';
-import ThreeManager from './ThreeManager';
+// import ThreeManager from './ThreeManager';
 import ThreeManagerTarget from './ThreeManagerTarget';
 
 export default class SectionFeatures extends React.Component {
@@ -12,7 +12,7 @@ export default class SectionFeatures extends React.Component {
         let section = _.get(this.props, 'section', null);
         return (
             <section id={_.get(section, 'section_id', null)} className={'block features-block bg-' + _.get(section, 'background', null) + ' outer'}>
-              <ThreeManager />
+              {/* <ThreeManager /> */}
               <div className="block-header inner-small">
                 {_.get(section, 'title', null) && (
                 <h2 className="block-title">{_.get(section, 'title', null)}</h2>

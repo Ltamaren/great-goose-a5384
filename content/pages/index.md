@@ -20,8 +20,9 @@ sections:
     title: Enter the BRN
     features:
       - title: Work barn. Play barn.
-        preview: 
+        preview:
           type: three_model_view
+          id: landing.model.barn
           scene: 3d/barn.gltf
           cameraInitPos: 1,10,10
           bgColor: rgb(247,249,251)
@@ -53,6 +54,7 @@ sections:
       - title: Live the myth...
         preview:
           type: three_model_view
+          id: landing.model.rikki
           scene: 3d/rikki.gltf
           cameraInitPos: 1,0,1
           bgColor: rgb(247,249,251)

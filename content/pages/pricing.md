@@ -44,7 +44,7 @@ sections:
           - label: Order Now
             url: /signup
             style: secondary
-    title: Coming soon...
+    title: COMING SOON...
   - section_id: faq
     type: section_faq
     background: gray

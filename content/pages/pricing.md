@@ -8,12 +8,12 @@ sections:
     pricing_plans:
       - title: JOIN BRN
         price: 1000 $BRN
-        details: |-
-          * Curabitur non nunc mollis
-          * Duis a purus nec ligula pellentesque dolor
-          * Pellentesque sit amet
-          * Fusce tempus mi vitae luctus
-          * Nullam sollicitudin ante
+        details: |
+
+
+          BARN MEMBERS GET ACCESS TO...
+
+          *   the BRN
         highlight: true
         actions:
           - label: Order Now

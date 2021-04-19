@@ -4,7 +4,7 @@ sections:
   - section_id: pricing
     type: section_pricing
     background: gray
-    subtitle: 'Customize your barn, '
+    subtitle: 'Customize your barn, choose your avatar, '
     pricing_plans:
       - title: Basic
         subtitle: For small businesses

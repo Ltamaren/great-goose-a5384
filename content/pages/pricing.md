@@ -17,7 +17,7 @@ sections:
         highlight: true
         actions:
           - label: Order Now
-            url: /signup
+            url: BUY $BRN
             style: primary
     title: COMING SOON...
   - section_id: faq

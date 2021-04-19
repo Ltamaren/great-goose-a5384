@@ -44,7 +44,7 @@ sections:
           - label: Order Now
             url: /signup
             style: secondary
-    title: BRN
+    title: Coming soon...
   - section_id: faq
     type: section_faq
     background: gray

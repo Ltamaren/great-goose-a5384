@@ -4,7 +4,7 @@ sections:
   - section_id: pricing
     type: section_pricing
     background: gray
-    subtitle: 'Buy your NFT avatar, rent a '
+    subtitle: 'Buy your customize your barn, '
     pricing_plans:
       - title: Basic
         subtitle: For small businesses

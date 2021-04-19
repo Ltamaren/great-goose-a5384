@@ -4,7 +4,6 @@ import { withPrefix } from '../utils'
 import * as THREE from 'three'
 import oc from 'three-orbit-controls'
 import GLTFLoader from 'three-gltf-loader';
-import { renderer } from './ThreeManager';
 
 const {
   DirectionalLight, PerspectiveCamera, Scene, WebGLRenderer,
@@ -24,7 +23,6 @@ const ThreeManagerTarget = (props) => {
   }, [])
 
   async function handleMounted() {
-    const sceneData = makeScene(cnrRef.current)
     const sceneRenderFn = await initScene(cnrRef.current)
     const rect = canvasRef.current.getBoundingClientRect()
     // canvasRef.current.width = rect.width
@@ -95,11 +93,9 @@ const ThreeManagerTarget = (props) => {
     controls = s.controls
 
     scene.add(model);
-    return (time, rect) => {
-      // model.rotation.y = time * .1;
+    return (time, rect, renderer) => {
       camera.aspect = rect.width / rect.height;
       camera.updateProjectionMatrix();
-      // controls.handleResize()
       controls.update();
       renderer.render(scene, camera);
     };

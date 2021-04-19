@@ -30,8 +30,6 @@ const ThreeManager = () => {
 
   function resize() {
     const scenes = scenesRef.current
-    // let rW = 0
-    // let rH = 0
     for (const id in scenes) {
       const scale = window.devicePixelRatio
       const { elem, ctx } = scenes[id]
@@ -40,10 +38,7 @@ const ThreeManager = () => {
       const sH = height * scale
       ctx.canvas.width = sW
       ctx.canvas.height = sH
-      // rW = Math.max(rW, sW)
-      // rH = Math.max(rH, sH)
     }
-    // rendererRef.current.setSize(rW, rH)
   }
 
   function init() {

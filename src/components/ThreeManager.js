@@ -17,29 +17,33 @@ const ThreeManager = () => {
           regs[id].rect = regs[id].elem.getBoundingClientRect()
         }
         scenesRef.current = regs
+        resize()
       },
       state => state.scenes
     )
-    // window.addEventListener("resize", resize)
+    window.addEventListener("resize", resize)
     return () => {
-      // window.removeEventListener("resize", resize)
+      window.removeEventListener("resize", resize)
       unsub()
     }
   }, [])
 
   function resize() {
     const scenes = scenesRef.current
+    // let rW = 0
+    // let rH = 0
     for (const id in scenes) {
-      const elem = scenes[id].elem
+      const scale = window.devicePixelRatio
+      const { elem, ctx } = scenes[id]
       const { width, height } = elem.getBoundingClientRect()
-      scenes[id].dims = { width, height }
-      scenes[id].ctx.canvas.width = width
-      scenes[id].ctx.canvas.height = height
+      const sW = width * scale
+      const sH = height * scale
+      ctx.canvas.width = sW
+      ctx.canvas.height = sH
+      // rW = Math.max(rW, sW)
+      // rH = Math.max(rH, sH)
     }
-
-    // canvasRef.current.width = window.innerWidth
-    // canvasRef.current.height = window.innerHeight
-    // rendererRef.current.setSize(window.innerWidth, window.innerWidth)
+    // rendererRef.current.setSize(rW, rH)
   }
 
   function init() {
@@ -51,8 +55,6 @@ const ThreeManager = () => {
     renderer.setScissorTest(true);
     rendererRef.current = renderer;
     
-    // resize()
-
     frameRef.current = requestAnimationFrame(render)
   }
 
@@ -71,25 +73,22 @@ const ThreeManager = () => {
       const rendererCanvas = renderer.domElement;
 
       const isOffscreen =
-          bottom < 0 ||
-          top > window.innerHeight ||
-          right < 0 ||
-          left > window.innerWidth;
-
+      bottom < 0 ||
+      top > window.innerHeight ||
+      right < 0 ||
+      left > window.innerWidth;
+      
       if (!isOffscreen) {
+        const scale = window.devicePixelRatio
+        const scaledWidth = width * scale
+        const scaledHeight = height * scale
         // make sure the renderer's canvas is big enough
-        if (canvas.width < width || canvas.height < height) {
+        if (canvas.width/scale < width || canvas.height/scale < height) {
           renderer.setSize(width, height, false);
         }
 
-        // make sure the canvas for this area is the same size as the area
-        if (ctx.canvas.width !== width || ctx.canvas.height !== height) {
-          ctx.canvas.width = width;
-          ctx.canvas.height = height;
-        }
-
-        renderer.setScissor(0, 0, width/2, height/2);
-        renderer.setViewport(0, 0, width/2, height/2);
+        renderer.setScissor(0, 0, width, height);
+        renderer.setViewport(0, 0, width, height);
 
         fn(time, rect, renderer);
 
@@ -97,8 +96,8 @@ const ThreeManager = () => {
         ctx.globalCompositeOperation = 'copy';
         ctx.drawImage(
             rendererCanvas,
-            0, canvas.height - height, width, height,  // src rect
-            0, 0, width, height);                              // dst rect
+            0, canvas.height - scaledHeight, scaledWidth, scaledHeight,  // src rect
+            0, 0, scaledWidth, scaledHeight);                              // dst rect
       }
     }
 

@@ -28,6 +28,7 @@ const ThreeManagerTarget = (props) => {
     // canvasRef.current.width = rect.width
     // canvasRef.current.height = rect.height
     const ctx = canvasRef.current.getContext('2d')
+    ctx.scale(window.devicePixelRatio, window.devicePixelRatio)
     addScene({
       id: props.id,
       elem: cnrRef.current,

@@ -85,18 +85,21 @@ const HeroBarn = (props) => {
     controls.dampingFactor = 0.1;
     controls.enableZoom = false;
     controls.enablePan = false;
+    // controls.autoRotate = true;
+    // controls.autoRotateSpeed = 0.1;
     controls.enabled = false;
-    
-    window.addEventListener( 'resize', setSize );
     
     sceneRef.current = scene
     rendererRef.current = renderer
     cameraRef.current = camera
     controlsRef.current = controls
-    window._CAMERA = cameraRef.current
+    
+    window.addEventListener( 'resize', setSize );
+    setSize()
 
     return (time, rect, renderer) => {
       renderer.render(scene, camera)
+      // controls.update()
     }
   }
 

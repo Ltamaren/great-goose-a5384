@@ -40,9 +40,11 @@ sections:
             icon_position: right
       - title: Define your identity
         preview:
-          type: image
-          image: images/cryptogoose.png
-          image_alt: App users welcoming a new member
+          type: three_model_view
+          id: landing.model.rikki
+          scene: 3d/rikki.gltf
+          cameraInitPos: 1,0,1
+          bgColor: rgb(247,249,251)
         content: "**CREATE YOUR AVATAR**: Create your own blockchain certified NFT barn avatar. Our avatars are designed to evaporate the inherent prejudices tethered to the human form.\_\n"
         actions:
           - label: Learn More
@@ -53,11 +55,9 @@ sections:
             icon_position: right
       - title: Live the myth...
         preview:
-          type: three_model_view
-          id: landing.model.rikki
-          scene: 3d/rikki.gltf
-          cameraInitPos: 1,0,1
-          bgColor: rgb(247,249,251)
+          type: image
+          image: images/cryptogoose.png
+          image_alt: App users welcoming a new member
         content: >
           Participate and contriubute to the evolution of BRN. Your ideas will
           help create the BRN revolution.

@@ -6,6 +6,8 @@ import {withPrefix, attribute} from '../utils';
 import Header from './Header';
 import Footer from './Footer';
 
+import ThreeManager from './ThreeManager';
+
 export default class Body extends React.Component {
     render() {
         let font = _.get(this.props, 'data.config.base_font', null) || 'nunito-sans';
@@ -53,6 +55,7 @@ export default class Body extends React.Component {
                   <Header {...this.props} />
                   <main id="content" className="site-content">
                     {this.props.children}
+                    <ThreeManager />
                   </main>
                   <Footer {...this.props} />
                 </div>

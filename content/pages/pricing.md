@@ -7,7 +7,6 @@ sections:
     subtitle: 'Customize your barn, choose your avatar, buy BRN'
     pricing_plans:
       - title: JOIN BRN
-        subtitle: BE A PART
         price: $49/m
         details: |-
           * Curabitur non nunc mollis

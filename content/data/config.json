@@ -4,7 +4,7 @@
     "base_font": "nunito-sans",
     "palette": "blue",
     "header": {
-        "logo_img": "images/logo.svg",
+        "logo_img": "images/robust-artichoke.png",
         "logo_img_alt": "Logo",
         "has_nav": true,
         "nav_links": [
@@ -14,22 +14,23 @@
                 "style": "link"
             },
             {
-                "label": "Features",
+                "label": "BUDL",
                 "url": "/features",
-                "style": "link"
+                "style": "link",
+                "new_window": true
             },
             {
-                "label": "Pricing",
+                "label": "RELIGION 2.0",
                 "url": "/pricing",
                 "style": "link"
             },
             {
-                "label": "Style Guide",
+                "label": "THUMP",
                 "url": "/style-guide",
                 "style": "link"
             },
             {
-                "label": "Sign Up",
+                "label": "JOIN BRN",
                 "url": "/signup",
                 "style": "primary"
             }
@@ -39,7 +40,7 @@
         "sections": [
             {
                 "type": "footer_text",
-                "image": "images/logo-alt.svg",
+                "image": "images/terrific-hedgehog.png",
                 "image_url": "/",
                 "image_alt": "Footer logo",
                 "content": "Stackbit theme demo"
@@ -133,5 +134,5 @@
         ],
         "content": "&copy; Stackbit. All rights reserved. This Jamstack site was created with <a href=\"https://www.stackbit.com/?utm_source=deployed-footer\" target=\"_blank\" rel=\"noopener\">Stackbit</a>. Create yours <a href=\"https://app.stackbit.com/create?theme=azimuth&utm_source=deployed-footer\" target=\"_blank\" rel=\"noopener\">now</a>."
     },
-    "domain": "https://adorable-crane-a28af.netlify.app"
+    "domain": "https://great-goose-a5384.netlify.app"
 }

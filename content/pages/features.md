@@ -6,22 +6,8 @@ sections:
     background: gray
     image: images/feature1.png
     image_alt: App preview on a phone and tablet
-    title: The Best Features of Your Services
-    content: >-
-      Nam pulvinar ante eu ultricies volutpat. Sed nulla nibh, dapibus sit amet
-      cursus quis, fringilla nec sapien. Vestibulum imperdiet nunc bibendum
-      consectetur lobortis.
-
-
-      * Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
-      * Ut eu nunc at diam fringilla fringilla eu ut massa.
-
-      * Phasellus ut enim non lorem venenatis rutrum.
-
-
-      Mollis eget congue quis, venenatis sit amet metus. Etiam sit amet tortor
-      sed justo tempor condimentum.
+    title: Create Barnstory...
+    content: "**CREATE YOUR AVATAR**: Create your own blockchain certified NFT barn avatar. Our avatars are designed to evaporate inherent prejudice tethered to the physical form.\_\n\n**RESERVE A BARN**: Hold lectures, seminars, debates, celebrations in your BRN. Bring the best minds of our generation today to lay the philosophical groundwork of tomorrow.\_\n\n**DEEP LEARNING**:\_ Audition your ideas with our deep learning software to watch ideas play out in simulated BRN society.\_\n\n**FARM:** Our unique social \"mining\" process where users will earn BRN through active community involvement. \n\n\\*\\*YOU ARE THE MYTH: \\*\\*your characters will have their own adventures in the Thumpaverse. Write your story. Be the bridge between past and present myths. Choose your own Space Barn adventure.\_\n"
     actions:
       - label: Free Trial
         url: /signup
@@ -31,12 +17,12 @@ sections:
         style: secondary
   - section_id: call-to-action
     type: section_cta
-    title: This Is Call to Action Block!
-    subtitle: This is an optional description for the call to action block.
+    subtitle: Join the BRN revolution
     actions:
       - label: Get Started
         url: '#'
         style: secondary
+    title: The journey begins here...
 seo:
   title: Features
   description: This is the features page

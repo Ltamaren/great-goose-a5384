@@ -6,7 +6,7 @@ sections:
     background: gray
     subtitle: 'Customize your barn, choose your avatar, buy BRN'
     pricing_plans:
-      - title: Professional
+      - title: JOIN BRN
         subtitle: For medium-sized businesses
         price: $49/m
         details: |-

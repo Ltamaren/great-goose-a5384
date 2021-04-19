@@ -6,18 +6,6 @@ sections:
     background: gray
     subtitle: 'Customize your barn, choose your avatar, buy BRN'
     pricing_plans:
-      - title: Basic
-        subtitle: For small businesses
-        price: $5/m
-        details: |-
-          * Lorem ipsum dolor sit amet
-          * Mauris a mi tincidunt
-          * Suspendisse ut lacus
-          * Etiam eget dui a augue
-        actions:
-          - label: Order Now
-            url: /signup
-            style: secondary
       - title: Professional
         subtitle: For medium-sized businesses
         price: $49/m

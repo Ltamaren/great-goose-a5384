@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Half Bold Pixel-7';
+    src: url('HalfBoldPixel-7.woff2') format('woff2'),
+        url('HalfBoldPixel-7.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+

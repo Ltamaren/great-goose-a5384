@@ -2,8 +2,8 @@
 title: Home
 sections:
   - type: section_hero
-    image: images/hero.png
-    image_alt: App preview
+    image: images/hero.jpg
+    image_alt: BARNCOIN
     title: >-
       “The world’s first decentralized, deflationary, NFT based post-religion
       token.
@@ -19,13 +19,20 @@ sections:
     background: gray
     title: Enter the BRN
     features:
-      - title: Work barn. Play barn.
+      - title: >
+          Work barn. Play barn.
         preview:
           type: three_model_view
           id: landing.model.barn
-          scene: 3d/barn.gltf
+          scene: 3d/barn-empty.gltf
           cameraInitPos: 1,8,10
           bgColor: rgb(247,249,251)
+          lights:
+            - type: point
+              color: rgb(200,200,200)
+              intensity: 0.25
+            - type: ambient
+              color: rgb(200,200,200)
         content: >
           Work or play, our customizable  events have you covered. Hold
           lectures, seminars, debates, concerts, or celebrations in the BRN.
@@ -45,6 +52,10 @@ sections:
           scene: 3d/rikki.gltf
           cameraInitPos: 1,0,1
           bgColor: rgb(247,249,251)
+          lights:
+            - type: directional
+              pos: -1,2,4
+              color: white
         content: "**CREATE YOUR AVATAR**: Create your own blockchain certified NFT barn avatar. Our avatars are designed to evaporate the inherent prejudices tethered to the human form.\_\n"
         actions:
           - label: Learn More
@@ -55,9 +66,15 @@ sections:
             icon_position: right
       - title: Live the myth...
         preview:
-          type: image
-          image: images/cryptogoose.png
-          image_alt: App users welcoming a new member
+          type: three_model_view
+          id: landing.model.pidgey
+          scene: 3d/pidgey.gltf
+          cameraInitPos: 1,0,1
+          bgColor: rgb(247,249,251)
+          lights:
+            - type: directional
+              pos: -1,2,4
+              color: white
         content: >
           Participate and contriubute to the evolution of BRN. Your ideas will
           help create the BRN revolution.
@@ -115,14 +132,14 @@ sections:
     background: gray
     title: COMING SOON...
 seo:
-  title: Stackbit Azimuth Theme
+  title: BARNCOIN
   description: The preview of the Azimuth theme
   extra:
     - name: 'og:type'
       value: website
       keyName: property
     - name: 'og:title'
-      value: Stackbit Azimuth Theme
+      value: BARNCOIN
       keyName: property
     - name: 'og:description'
       value: The preview of the Azimuth theme
@@ -134,11 +151,11 @@ seo:
     - name: 'twitter:card'
       value: summary_large_image
     - name: 'twitter:title'
-      value: Stackbit Azimuth Theme
+      value: BARNCOIN
     - name: 'twitter:description'
       value: The preview of the Azimuth theme
     - name: 'twitter:image'
-      value: images/hero.png
+      value: images/hero.jpg
       relativeUrl: true
 layout: landing
 ---

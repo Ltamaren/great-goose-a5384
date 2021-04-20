@@ -1,8 +1,9 @@
 .block-title {
   font-size: 2em;
+  font-family: 'Half Bold Pixel-7', monospace;
 
   @media only screen and (min-width: 601px) {
-    font-size: 2.44444em;
+    font-size: 2.66667em;
   }
 }
 
@@ -10,7 +11,7 @@
   text-align: center;
 
   .block-title {
-    font-size: 1.66667em;
+    font-size: 1.33332em;
     margin: 0 0 0.25em;
 
     &:last-child {
@@ -55,6 +56,12 @@
     .font-fira-sans & {
       font-weight: 600;
     }
+  }
+}
+
+.hero-block {
+  .block-title {
+    font-size: 2em;
   }
 }
 
@@ -175,8 +182,15 @@
 
 // Cta block
 .cta-block {
+  background: black;
+  
   .block-title {
     margin-bottom: 0.25em;
+    color: white;
+  }
+
+  .block-copy {
+    color: rgb(200,200,200);
   }
 
   .block-buttons {

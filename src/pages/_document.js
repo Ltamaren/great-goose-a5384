@@ -33,7 +33,11 @@ class MyDocument extends Document {
     render() {
         return (
             <Html {...this.helmetHtmlAttrComponents}>
-                <Head>{this.helmetHeadComponents}</Head>
+                <Head>
+                    {this.helmetHeadComponents}
+                    <link rel="stylesheet" href={withPrefix('fonts/wayfarers-toy-box/stylesheet.css')} />
+                    <link rel="stylesheet" href={withPrefix('fonts/HalfBoldPixel/stylesheet.css')} />
+                </Head>
                 <body {...this.helmetBodyAttrComponents}>
                     <Main />
                     <ScriptTag src={withPrefix('js/plugins.js')}/>

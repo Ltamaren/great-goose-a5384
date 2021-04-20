@@ -6,9 +6,8 @@ import oc from 'three-orbit-controls'
 import GLTFLoader from 'three-gltf-loader';
 
 const {
-  DirectionalLight, PerspectiveCamera, Scene, WebGLRenderer,
-  Color, Raycaster, Vector2, Vector3, Matrix4, Box3,
-  Mesh, BoxBufferGeometry, MeshBasicMaterial, ArrowHelper, } = THREE
+  DirectionalLight, PerspectiveCamera, Scene, AmbientLight, PointLight,
+  Color, Raycaster, Vector2, Box3, ArrowHelper } = THREE
 const OrbitControls = oc(THREE)
 const loader = new GLTFLoader()
 const raycaster = new Raycaster()
@@ -52,12 +51,26 @@ const ThreeManagerTarget = (props) => {
     controls.enabled = false;
     controls.autoRotate = true
 
-    {
-      const color = 0xFFFFFF;
-      const intensity = 1;
-      const light = new DirectionalLight(color, intensity);
-      light.position.set(-1, 2, 4);
-      camera.add(light);
+    if (props.lights.length) {
+      props.lights.forEach(l => {
+        let light
+        const color = new Color(_.get(l, 'color', '#fff'));
+        const intensity = _.get(l, 'intensity', 1);
+        const pos = _.get(l, 'pos', '-1,2,4').split(',').map(i => parseFloat(i))
+        switch (l.type) {
+          case 'directional':
+            light = new DirectionalLight(color, intensity);
+            break;
+          case 'point':
+            light = new PointLight(color, intensity);
+            break;
+          case 'ambient':
+            light = new AmbientLight(color);
+            break;
+        }
+        light.position.set(...pos);
+        camera.add(light)
+      })
     }
 
     return {scene, camera, controls};

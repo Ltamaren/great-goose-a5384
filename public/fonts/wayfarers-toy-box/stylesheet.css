@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Wayfarer\'s Toy Box';
+    src: url('Wayfarers-Toy-Box.woff2') format('woff2'),
+        url('Wayfarers-Toy-Box.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

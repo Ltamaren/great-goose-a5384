@@ -10,8 +10,17 @@ export default class SectionHero extends React.Component {
     render() {
         let section = _.get(this.props, 'section', null);
         return (
-            <section id={_.get(section, 'section_id', null)} className="block hero-block bg-accent outer" style={{position: 'relative'}}>
-              <HeroBarn scene={'3d/barn.gltf'} cameraInitPos={'-4.72,1.36,-0.14'} />
+            <section
+              id={_.get(section, 'section_id', null)}
+              className="block hero-block bg-accent outer"
+              style={{
+                position: 'relative',
+                backgroundImage: `url(${withPrefix(_.get(section, 'image', null))})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+              }}
+            >
+              {/* <HeroBarn scene={'3d/barn.gltf'} cameraInitPos={'-4.72,1.36,-0.14'} /> */}
               <div className="inner">
                 <div className="grid">
                   {/* {_.get(section, 'image', null) && ( */}

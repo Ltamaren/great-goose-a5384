@@ -9,11 +9,11 @@ import renderer from './ThreeManager'
 
 const {
   PointLight, PerspectiveCamera, Scene,
-  Color, Raycaster, } = THREE
+  Color, Raycaster, AmbientLight, } = THREE
 const OrbitControls = oc(THREE)
 const loader = new GLTFLoader()
 
-const INIT_POS = '{"cameraPosition":{"x":-4.854831631971536,"y":1.1582137352538657,"z":0.7749090484638657},"targetPosition":{"x":-1.706169253874643,"y":1.5165199445198663,"z":-1.4398500949057278}}'
+const INIT_POS = '{"cameraPosition":{"x":-4.854831631971536,"y":0,"z":0.5},"targetPosition":{"x":-1.706169253874643,"y":1.5165199445198663,"z":-1.4398500949057278}}'
 
 const HeroBarn = (props) => {
   const cnrRef = useRef()
@@ -64,20 +64,24 @@ const HeroBarn = (props) => {
     // camera.position.set( ...cameraInitPos );
     camera.position.copy(savedCamera.cameraPosition)
     
-    const barn = await new Promise((yes, no) => {
+    const barn = new Promise((yes, no) => {
       loader.load(
         withPrefix(_.get(props, 'scene', null)),
         (gltf) => {
+          scene.add(gltf.scene)
+          // const light2 = new PointLight()
+          // light2.position.set(0,6.748,20.808)
+          // light2.intensity = 1
+          // light2.lookAt(gltf.scene)
+          // scene.add(light2)
+          
+          const amb = new THREE.AmbientLight( 0xFFFFFF ); // soft white light
+          scene.add( amb );
+
           yes(gltf.scene)
         }
       )
     })
-    scene.add(barn)
-
-    const light2 = new PointLight()
-    light2.position.set(0,6.748,-11.808)
-    light2.intensity = 1
-    scene.add(light2)
 
     controls = new OrbitControls( camera, renderer.domElement );
     controls.target.copy(savedCamera.targetPosition)

@@ -1,6 +1,6 @@
 ---
 title: URGENT MESSAGE
-image: images/11.jpg
+image: images/5515d340914f9.image.jpg
 image_alt: Office desk top view
 seo:
   title: Sign Up
